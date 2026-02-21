@@ -58,13 +58,13 @@ function addTodo() {
 
     // Validation
     if (task === "" || date === "") {
-        alert("Task and Due Date must be filled.");
+        alert("Hayooo Lupa isi tanggal");
         return;
     }
 
     const today = new Date().toISOString().split("T")[0];
     if (date < today) {
-        alert("Due date cannot be in the past.");
+        alert("tanggal gabisa di hari kemarin, dikira time travel :D");
         return;
     }
 
@@ -105,5 +105,6 @@ taskInput.addEventListener("keypress", function (e) {
         addTodo();
     }
 });
+
 
 renderTodos();
